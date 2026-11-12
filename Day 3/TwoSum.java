@@ -1,0 +1,34 @@
+public class TwoSum {
+    public static void main(String[] args) {
+
+        int[] a = {10, 20, 30, 40, 50};
+
+        int target = 60;
+
+        int L = 0;
+        int R = a.length - 1;
+
+        while (L < R) {
+
+            int sum = a[L] + a[R];
+
+            if (sum == target) {
+
+                System.out.println(a[L] + " + " + a[R] + " = " + target);
+
+                L++;
+                R--;
+            }
+
+            else if (sum > target) {
+                R--;
+            }
+
+            else {
+                L++;
+            }
+        }
+    }
+}
+    
+
